@@ -1,4 +1,4 @@
-module github.com/validatecl/commons/kafka-toolkit
+module github.com/validatecl/kafka-toolkit
 
 go 1.13
 
