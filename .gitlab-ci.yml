@@ -1,0 +1,25 @@
+image: docker:dind
+services:
+  - docker:latest
+
+stages:
+  - test
+
+variables:
+  GOFLAGS: -mod=vendor
+
+unit-test:
+  stage: test
+  image: f/base/golang:1.16-latest
+  script:
+    - make test
+  only:
+    - branches
+
+coverage:
+  stage: test
+  image: f/base/golang:1.16-latest
+  script:
+    - make coverage
+  only:
+    - branches

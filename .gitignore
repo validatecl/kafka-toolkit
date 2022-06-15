@@ -1,0 +1,13 @@
+# testing
+coverfile_out
+coverfile_out.html
+debug.test
+
+# MacOSX
+.DS_Store
+
+# Certificate
+*.cer
+
+# cmd
+cmd/
