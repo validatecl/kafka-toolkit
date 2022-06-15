@@ -1,0 +1,15 @@
+
+stages:
+  - test
+
+variables:
+  GOFLAGS: -mod=vendor
+
+unit-test:
+  stage: test
+  image: f/golang:alpine
+  script:
+    - make test
+    - make coverage
+  only:
+    - branches
