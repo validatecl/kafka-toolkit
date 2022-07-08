@@ -13,7 +13,7 @@ require (
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/pierrec/lz4 v2.6.1+incompatible // indirect
 	github.com/prometheus/client_golang v1.12.2
-	github.com/validatecl/go-microservices-commons v1.0.1
+	github.com/validatecl/go-microservices-commons v1.0.8
 	github.com/xdg-go/scram v1.1.1
 	gopkg.in/DataDog/dd-trace-go.v1 v1.35.0
 )
