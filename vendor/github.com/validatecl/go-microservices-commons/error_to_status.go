@@ -23,6 +23,9 @@ func Error2Status(err error) int {
 	case *CustomError:
 		ceErr := err.(*CustomError)
 		return ceErr.StatusCode
+	case *WMError:
+		ceErr := err.(*WMError)
+		return ceErr.StatusCode
 	}
 
 	return http.StatusInternalServerError

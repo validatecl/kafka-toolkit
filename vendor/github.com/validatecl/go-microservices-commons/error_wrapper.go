@@ -23,6 +23,13 @@ type ErrorWrapper struct {
 	Docs    []string `json:"docs,omitempty"`
 }
 
+//ErrorWrapperWM wrapper de response error WM
+type ErrorWrapperWM struct {
+	Success bool       `json:"success"`
+	Errors  []*ErrItem `json:"errors"`
+	Docs    []*string  `json:"docs,omitempty"`
+}
+
 //NewErrorWrapper crea un nuevo error wrapper
 func NewErrorWrapper(code, message string, docs ...string) ErrorWrapper {
 
@@ -33,6 +40,19 @@ func NewErrorWrapper(code, message string, docs ...string) ErrorWrapper {
 	return ErrorWrapper{
 		Code:    code,
 		Message: message,
+		Docs:    docs,
+	}
+}
+
+//NewErrorWrapperWM crea un nuevo error wrapper
+func NewErrorWrapperWM(s bool, e []*ErrItem, docs ...*string) ErrorWrapperWM {
+	//if len(docs) < 1 {
+	//	docs = []*string{StringPointer(DOCSURL)}
+	//}
+
+	return ErrorWrapperWM{
+		Success: s,
+		Errors:  e,
 		Docs:    docs,
 	}
 }
@@ -57,6 +77,9 @@ func Error2Wrapper(err error) (status int, errBody interface{}) {
 	case *CustomError:
 		ceErr := err.(*CustomError)
 		return ceErr.StatusCode, NewErrorWrapper(ceErr.Code, ceErr.Message)
+	case *WMError:
+		ceErr := err.(*WMError)
+		return ceErr.StatusCode, NewErrorWrapperWM(ceErr.Success, ceErr.Errors, ceErr.Docs...)
 	default:
 		return http.StatusInternalServerError, NewErrorWrapper("500", err.Error())
 	}

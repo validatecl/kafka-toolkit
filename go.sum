@@ -567,6 +567,8 @@ github.com/validatecl/go-microservices-commons v1.0.1 h1:RErnIuRx5FYf1X9oZF0MPz5
 github.com/validatecl/go-microservices-commons v1.0.1/go.mod h1:/2lxIPBKkOSDA0TZjlxVUsjyeT+VCvH+9x1GtaGTq8U=
 github.com/validatecl/go-microservices-commons v1.0.8 h1:LUkWuKr3g/OfZ4vOcFbHJd3pVPJa0yljm6jGrLQ5fjg=
 github.com/validatecl/go-microservices-commons v1.0.8/go.mod h1:/2lxIPBKkOSDA0TZjlxVUsjyeT+VCvH+9x1GtaGTq8U=
+github.com/validatecl/go-microservices-commons v1.0.13 h1:/ujffJO8bJizhu0KvIPkbJV/LnswTYC9WDQ5CHn3GDM=
+github.com/validatecl/go-microservices-commons v1.0.13/go.mod h1:/2lxIPBKkOSDA0TZjlxVUsjyeT+VCvH+9x1GtaGTq8U=
 github.com/xdg-go/pbkdf2 v1.0.0 h1:Su7DPu48wXMwC3bs7MCNG+z4FhcyEuz5dlvchbq0B0c=
 github.com/xdg-go/pbkdf2 v1.0.0/go.mod h1:jrpuAogTd400dnrH08LKmI/xc1MbPOebTwRqcT5RDeI=
 github.com/xdg-go/scram v1.1.1 h1:VOMT+81stJgXW3CpHyqHN3AXDYIMsx56mEFrB37Mb/E=
